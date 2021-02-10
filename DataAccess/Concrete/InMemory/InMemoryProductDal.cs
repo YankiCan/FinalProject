@@ -10,7 +10,7 @@ namespace DataAccess.Concrete.InMemory
     public class InMemoryProductDal : IProductDal
     {
         List<Product> _products; // class içinde ama metotlar dışında tanımlananlar global değişkenlerdir, _ ile birlikte verilir. 
-        public InMemoryProductDal() // cons tabtab - Constructor; bellekte ref alınca çalışacak bloktur
+        public InMemoryProductDal() // ctor tabtab - Constructor; bellekte ref alınca çalışacak bloktur
         {
             // Oracle, Sql Server, Postgres, MongoDb
             _products = new List<Product> 
@@ -48,7 +48,7 @@ namespace DataAccess.Concrete.InMemory
 
         public void Update(Product product)
         {
-            // Gönderilenn ürün Id sine sahip olan listedeki ürünü bul.
+            // Gönderilen ürün Id sine sahip olan listedeki ürünü bul.
             Product productToUpdate = _products.SingleOrDefault(p => p.ProductId == product.ProductId);
             productToUpdate.ProductName = product.ProductName;
             productToUpdate.CategoryId = product.CategoryId;
