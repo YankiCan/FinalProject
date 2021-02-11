@@ -23,7 +23,7 @@ namespace HWLinq_01_Project
                 new Product{ProductId = 5, CategoryId = 2, ProductName = "Apple Telefon", QuantityPerUnit = "32 GB Ram", UnitPrice = 8000, UnitsInStock = 0 },
             };
 
-            //Test(products); // Kodları bir method içine atmayı sağlar - Extract Method komutu ile yapılır..
+            //Test(products); // Kodları bir method içine atmayı sağlar - Extract Method komutu ile yapılır....
 
             //GetProducts(products); 
 
